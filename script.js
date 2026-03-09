@@ -17,33 +17,29 @@ function displayProducts(filter) {
     const grid = document.getElementById('productGrid');
     if (!grid) return;
 
-    let finalHTML = ''; // Construim totul aici mai întâi
+    let htmlContent = '';
     const filtered = filter === 'all' ? products : products.filter(p => p.type === filter);
 
     filtered.forEach(p => {
-        finalHTML += `
+        htmlContent += `
             <div class="product-card">
-                <img src="${p.img}" alt="${p.name}" loading="lazy">
+                <img src="${p.img}" alt="${p.name}">
                 <h3>${p.name}</h3>
                 <span class="allergen-tag">⚠️ Alergeni: ${p.allergens}</span>
             </div>`;
     });
 
-    grid.innerHTML = finalHTML; // O singură scriere în DOM = fără clipit
+    grid.innerHTML = htmlContent;
 }
 
 function filterProducts(type) {
-    // Schimbăm clasa active pe butoane
-    const buttons = document.querySelectorAll('.filters button');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    
-    const activeBtn = document.getElementById(`btn-${type}`);
-    if (activeBtn) activeBtn.classList.add('active');
-
+    document.querySelectorAll('.filters button').forEach(btn => btn.classList.remove('active'));
+    const btn = document.getElementById(`btn-${type}`);
+    if (btn) btn.classList.add('active');
     displayProducts(type);
 }
 
-// Folosim DOMContentLoaded în loc de window.onload pentru stabilitate
+// Pornim afișarea doar după ce pagina e gata
 document.addEventListener('DOMContentLoaded', () => {
     displayProducts('all');
 });
