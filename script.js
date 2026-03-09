@@ -1,16 +1,16 @@
 const products = [
-    { name: "Pâine cu Maia", type: "sarat", allergens: "Gluten", img: "images/paine.jpg" },
-    { name: "Baghetă Rustică", type: "sarat", allergens: "Gluten", img: "images/bagheta.jpg" },
-    { name: "Pâine cu Semințe", type: "sarat", allergens: "Gluten, Susan", img: "images/paine-seminte.jpg" },
-    { name: "Focaccia cu Rozmarin", type: "sarat", allergens: "Gluten", img: "images/focaccia.jpg" },
-    { name: "Covrigi cu Susan", type: "sarat", allergens: "Gluten, Susan", img: "images/covrigi.jpg" },
-    { name: "Pâine Secară & Nucă", type: "sarat", allergens: "Gluten, Nuci", img: "images/paine-secara.jpg" },
-    { name: "Croissant cu Unt", type: "dulce", allergens: "Gluten, Lactoză", img: "images/croissant.jpg" },
-    { name: "Tartă cu Fructe", type: "dulce", allergens: "Ou, Lactoză", img: "images/tarta.jpg" },
-    { name: "Pain au Chocolat", type: "dulce", allergens: "Gluten, Lactoză", img: "images/pain-chocolat.jpg" },
-    { name: "Melc cu Scorțișoară", type: "dulce", allergens: "Gluten, Scorțișoară", img: "images/melc.jpg" },
-    { name: "Brioșă cu Vanilie", type: "dulce", allergens: "Gluten, Ou", img: "images/briosa.jpg" },
-    { name: "Chec cu Banane", type: "dulce", allergens: "Gluten, Nuci", img: "images/chec.jpg" }
+    { name: "Pâine cu Maia", type: "sarat", allergens: "Gluten", img: "images/paine.png" },
+    { name: "Baghetă Rustică", type: "sarat", allergens: "Gluten", img: "images/bagheta.png" },
+    { name: "Pâine cu Semințe", type: "sarat", allergens: "Gluten, Susan", img: "images/paine-seminte.png" },
+    { name: "Focaccia cu Rozmarin", type: "sarat", allergens: "Gluten", img: "images/focaccia.png" },
+    { name: "Covrigi cu Susan", type: "sarat", allergens: "Gluten, Susan", img: "images/covrigi.png" },
+    { name: "Pâine Secară & Nucă", type: "sarat", allergens: "Gluten, Nuci", img: "images/paine-secara.png" },
+    { name: "Croissant cu Unt", type: "dulce", allergens: "Gluten, Lactoză", img: "images/croissant.png" },
+    { name: "Tartă cu Fructe", type: "dulce", allergens: "Ou, Lactoză", img: "images/tarta.png" },
+    { name: "Pain au Chocolat", type: "dulce", allergens: "Gluten, Lactoză", img: "images/pain-chocolat.png" },
+    { name: "Melc cu Scorțișoară", type: "dulce", allergens: "Gluten, Scorțișoară", img: "images/melc.png" },
+    { name: "Brioșă cu Vanilie", type: "dulce", allergens: "Gluten, Ou", img: "images/briosa.png" },
+    { name: "Chec cu Banane", type: "dulce", allergens: "Gluten, Nuci", img: "images/chec.png" }
 ];
 
 function displayProducts(filter) {
@@ -42,7 +42,6 @@ function filterProducts(type) {
     displayProducts(type);
 }
 
-// Folosim DOMContentLoaded pentru a evita orice clipit sau eroare de încărcare
 document.addEventListener('DOMContentLoaded', () => {
     displayProducts('all');
 });
