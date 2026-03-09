@@ -13,12 +13,13 @@ const products = [
     { name: "Chec cu Banane", type: "dulce", allergens: "Gluten, Nuci", img: "images/chec.jpg" }
 ];
 
-// Restul funcției displayProducts rămâne la fel...
 function displayProducts(filter) {
     const grid = document.getElementById('productGrid');
     if (!grid) return;
+
     let htmlContent = '';
     const filtered = filter === 'all' ? products : products.filter(p => p.type === filter);
+
     filtered.forEach(p => {
         htmlContent += `
             <div class="product-card">
@@ -27,7 +28,21 @@ function displayProducts(filter) {
                 <span class="allergen-tag">⚠️ Alergeni: ${p.allergens}</span>
             </div>`;
     });
+
     grid.innerHTML = htmlContent;
 }
 
-document.addEventListener('DOMContentLoaded', () => displayProducts('all'));
+function filterProducts(type) {
+    const buttons = document.querySelectorAll('.filters button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    const targetBtn = document.getElementById(`btn-${type}`);
+    if (targetBtn) targetBtn.classList.add('active');
+
+    displayProducts(type);
+}
+
+// Folosim DOMContentLoaded pentru a evita orice clipit sau eroare de încărcare
+document.addEventListener('DOMContentLoaded', () => {
+    displayProducts('all');
+});
