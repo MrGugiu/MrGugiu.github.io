@@ -13,13 +13,12 @@ const products = [
     { name: "Chec cu Banane", type: "dulce", allergens: "Gluten, Nuci", img: "images/chec.jpg" }
 ];
 
+// Restul funcției displayProducts rămâne la fel...
 function displayProducts(filter) {
     const grid = document.getElementById('productGrid');
     if (!grid) return;
-
     let htmlContent = '';
     const filtered = filter === 'all' ? products : products.filter(p => p.type === filter);
-
     filtered.forEach(p => {
         htmlContent += `
             <div class="product-card">
@@ -28,18 +27,7 @@ function displayProducts(filter) {
                 <span class="allergen-tag">⚠️ Alergeni: ${p.allergens}</span>
             </div>`;
     });
-
     grid.innerHTML = htmlContent;
 }
 
-function filterProducts(type) {
-    document.querySelectorAll('.filters button').forEach(btn => btn.classList.remove('active'));
-    const btn = document.getElementById(`btn-${type}`);
-    if (btn) btn.classList.add('active');
-    displayProducts(type);
-}
-
-// Pornim afișarea doar după ce pagina e gata
-document.addEventListener('DOMContentLoaded', () => {
-    displayProducts('all');
-});
+document.addEventListener('DOMContentLoaded', () => displayProducts('all'));
