@@ -1,7 +1,7 @@
 :root {
-    --primary: #4E342E; /* Maro profund */
-    --accent: #A8B5A2;  /* Verde Salvie */
-    --bg: #F5EBE0;      /* Bej cald */
+    --primary: #4E342E;
+    --accent: #A8B5A2;
+    --bg: #F5EBE0;
     --white: #FFFFFF;
 }
 
@@ -11,13 +11,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg);
     color: var(--primary);
-    line-height: 1.6;
-    scroll-behavior: smooth;
 }
 
 h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-/* Navigație */
 nav {
     display: flex;
     justify-content: space-between;
@@ -27,7 +24,6 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo { font-size: 28px; font-weight: bold; color: var(--primary); text-decoration: none; }
@@ -35,10 +31,9 @@ nav {
 
 nav ul { display: flex; list-style: none; }
 nav ul li { margin-left: 25px; }
-nav ul li a { text-decoration: none; color: var(--primary); font-weight: 600; transition: 0.3s; }
-nav ul li a:hover, nav ul li a.active { color: var(--accent); }
+nav ul li a { text-decoration: none; color: var(--primary); font-weight: 600; }
+nav ul li a.active { color: var(--accent); }
 
-/* Hero Section */
 .hero {
     height: 60vh;
     display: flex;
@@ -50,10 +45,10 @@ nav ul li a:hover, nav ul li a.active { color: var(--accent); }
     background-position: center;
 }
 
-.hero h1 { font-size: 3.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); margin-bottom: 10px; }
+.hero h1 { font-size: 3.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
 
-/* Dashboard Produse */
 .dashboard { padding: 60px 10%; text-align: center; }
+
 .filters { margin: 30px 0; }
 .filters button {
     background: white;
@@ -62,7 +57,6 @@ nav ul li a:hover, nav ul li a.active { color: var(--accent); }
     cursor: pointer;
     margin: 5px;
     border-radius: 25px;
-    font-weight: 600;
 }
 .filters button.active { background: var(--accent); color: white; }
 
@@ -76,7 +70,6 @@ nav ul li a:hover, nav ul li a.active { color: var(--accent); }
     background: white;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     text-align: left;
 }
 
@@ -88,17 +81,14 @@ nav ul li a:hover, nav ul li a.active { color: var(--accent); }
     background: #f4f4f4;
     padding: 5px 10px;
     margin-top: 10px;
-    border-radius: 5px;
 }
 
-/* Butoane */
 .btn {
     background: var(--accent);
     color: white;
     padding: 15px 40px;
     text-decoration: none;
     border-radius: 50px;
-    font-weight: bold;
     display: inline-block;
 }
 
