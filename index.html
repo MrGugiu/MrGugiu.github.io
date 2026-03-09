@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Bread & Better | Acasă</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Bread<span>&</span>Better</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#produse">Produse</a></li>
+            <li><a href="about.html">Poveste</a></li>
+            <li><a href="ghid.html">Ghid</a></li>
+            <li><a href="locatii.html">Locații</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bread.jpg');">
+        <div class="hero-content">
+            <h1>Calitate scoasă din cuptor.</h1>
+            <p>Pâine artizanală creată cu maia și pasiune.</p><br>
+            <a href="#produse" class="btn">Vezi Produsele</a>
+        </div>
+    </header>
+
+    <section id="produse" class="dashboard">
+        <h2>Produsele Noastre</h2>
+        <div class="filters">
+            <button onclick="filterProducts('all')" class="active" id="btn-all">Toate</button>
+            <button onclick="filterProducts('sarat')" id="btn-sarat">Sărate</button>
+            <button onclick="filterProducts('dulce')" id="btn-dulce">Dulciuri</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <footer><p>&copy; 2026 Bread&Better | MrGugiu.github.io</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
