@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Bread & Better</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Bread<span>&</span>Better</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#produse">Produse</a></li>
+            <li><a href="about.html">Poveste</a></li>
+            <li><a href="ghid.html">Ghid</a></li>
+            <li><a href="locatii.html">Locații</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section style="max-width: 600px; margin: 80px auto; background: white; padding: 40px; border-radius: 20px;">
+        <h1 style="text-align: center;">Scrie-ne un mesaj</h1>
+        <form action="https://formsubmit.co/adresa_ta@email.com" method="POST" style="margin-top: 30px;">
+            <input type="text" name="name" placeholder="Numele tău" required style="width: 100%; padding: 12px; margin-bottom: 15px;">
+            <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 12px; margin-bottom: 15px;">
+            <textarea name="message" placeholder="Mesaj" rows="5" required style="width: 100%; padding: 12px; margin-bottom: 15px;"></textarea>
+            <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Trimite</button>
+        </form>
+    </section>
+
+    <footer><p>&copy; 2026 Bread&Better</p></footer>
+</body>
+</html>
