@@ -2,10 +2,13 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Povestea Noastră | Bread & Better</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <nav>
         <a href="index.html" class="logo">Bread<span>&</span>Better</a>
         <ul>
@@ -17,16 +20,54 @@
         </ul>
     </nav>
 
-    <section style="padding: 80px 10%;">
-        <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
-            <div style="flex: 1; min-width: 300px;"><img src="images/about-process.png" style="width: 100%; border-radius: 20px;"></div>
-            <div style="flex: 1; min-width: 300px;">
-                <h1>Făcut cu mâna, dospit cu inima.</h1>
-                <p>La Bread&Better, respectăm ritmul natural al dospirii pentru un gust autentic.</p>
-            </div>
+    <header class="about-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/about-process.png');">
+        <h1>Mai mult decât făină și apă.</h1>
+    </header>
+
+    <section class="mission-section">
+        <div class="mission-content">
+            <h2>Misiunea Noastră</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #555;">
+                Misiunea <strong>Bread & Better</strong> este să readucem pe masa fiecărui român gustul autentic al pâinii de altădată. 
+                Într-o lume a vitezei, noi am ales să încetinim procesul, folosind doar ingrediente naturale și tehnici artizanale 
+                care respectă ritmul biologic al aluatului. Credem că o hrană mai bună înseamnă o viață mai bună.
+            </p>
         </div>
     </section>
 
-    <footer><p>&copy; 2026 Bread&Better</p></footer>
+    <div style="text-align: center; padding-top: 50px;">
+        <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem;">Valorile Noastre</h2>
+    </div>
+
+    <section class="values-grid">
+        <div class="value-card">
+            <h3>⏳ Timpul ca Ingredient</h3>
+            <p>Nu grăbim procesul. Toată pâinea noastră trece printr-o dospire lentă de 24 de ore cu maia naturală pentru o digestie ușoară și o aromă intensă.</p>
+        </div>
+        <div class="value-card">
+            <h3>🌱 Transparență Totală</h3>
+            <p>Folosim doar 4 ingrediente de bază: făină, apă, sare și maia. Fără amelioratori, conservanți sau zahăr adăugat în pâinea noastră zilnică.</p>
+        </div>
+        <div class="value-card">
+            <h3>🤝 Comunitate</h3>
+            <p>Colaborăm cu mori locale și producători regionali. Bread & Better nu este doar o afacere, ci un loc de întâlnire pentru iubitorii de gust bun.</p>
+        </div>
+    </section>
+
+    <section style="padding: 80px 10%; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; background: white;">
+        <div style="flex: 1; min-width: 300px;">
+            <h2 style="font-family: 'Playfair Display'; font-size: 2.2rem; margin-bottom: 20px;">Cum a început totul?</h2>
+            <p style="margin-bottom: 15px;">Totul a pornit dintr-o bucătărie mică și o nemulțumire mare: lipsa pâinii adevărate din comerț. Am început să experimentăm cu maiaua bunicii și am descoperit că oamenii nu vor doar pâine, ci caută o experiență, un miros care să le amintească de copilărie.</p>
+            <p>Numele <strong>Bread & Better</strong> a venit natural: vrem să facem pâinea mai bună (Better) și, prin ea, să facem diminețile clienților noștri un pic mai frumoase.</p>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+            <img src="images/hero-bread.png" alt="Proces artizanal" style="width: 100%; border-radius: 20px; box-shadow: 20px 20px 0 var(--accent);">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bread & Better | Creat cu pasiune pentru artizanat.</p>
+    </footer>
+
 </body>
 </html>
