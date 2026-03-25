@@ -1,20 +1,27 @@
 :root {
-    --primary: #4E342E;
-    --accent: #A8B5A2;
-    --bg: #F5EBE0;
+    --primary: #4E342E; /* Maro */
+    --accent: #A8B5A2;  /* Verde Salvie */
+    --bg: #F5EBE0;      /* Bej */
     --white: #FFFFFF;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg);
     color: var(--primary);
+    line-height: 1.6;
+    overflow-x: hidden; /* Previne scroll-ul stânga-dreapta pe mobil */
 }
 
 h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
+/* --- NAVIGAȚIE (Desktop & General) --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -24,16 +31,35 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.logo { font-size: 28px; font-weight: bold; color: var(--primary); text-decoration: none; }
+.logo { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: var(--primary); 
+    text-decoration: none; 
+}
 .logo span { color: var(--accent); }
 
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 25px; }
-nav ul li a { text-decoration: none; color: var(--primary); font-weight: 600; }
-nav ul li a.active { color: var(--accent); }
+nav ul { 
+    display: flex; 
+    list-style: none; 
+}
 
+nav ul li { margin-left: 20px; }
+
+nav ul li a { 
+    text-decoration: none; 
+    color: var(--primary); 
+    font-weight: 600; 
+    font-size: 0.9rem;
+    transition: 0.3s; 
+}
+
+nav ul li a:hover, nav ul li a.active { color: var(--accent); }
+
+/* --- HERO SECTION --- */
 .hero {
     height: 60vh;
     display: flex;
@@ -43,107 +69,125 @@ nav ul li a.active { color: var(--accent); }
     color: white;
     background-size: cover;
     background-position: center;
+    padding: 0 20px;
 }
 
-.hero h1 { font-size: 3.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-
-.dashboard { padding: 60px 10%; text-align: center; }
-
-.filters { margin: 30px 0; }
-.filters button {
-    background: white;
-    border: 2px solid var(--accent);
-    padding: 10px 25px;
-    cursor: pointer;
-    margin: 5px;
-    border-radius: 25px;
+.hero h1 { 
+    font-size: 3rem; 
+    margin-bottom: 15px; 
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
 }
-.filters button.active { background: var(--accent); color: white; }
+
+/* --- DASHBOARD & GRID --- */
+.dashboard { padding: 60px 8%; text-align: center; }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    margin-top: 40px;
 }
 
 .product-card {
-    background: white;
+    background: var(--white);
     padding: 20px;
     border-radius: 15px;
-    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center; /* Centrează textul în card pe mobil */
 }
 
-.product-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; }
+.product-card img { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
 
 .allergen-tag {
-    display: block;
+    display: inline-block;
     font-size: 0.8rem;
     background: #f4f4f4;
-    padding: 5px 10px;
+    padding: 5px 12px;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
+/* --- BUTOANE --- */
 .btn {
     background: var(--accent);
     color: white;
-    padding: 15px 40px;
+    padding: 12px 30px;
     text-decoration: none;
     border-radius: 50px;
+    font-weight: bold;
     display: inline-block;
-}
-/* Stiluri specifice pentru Pagina About */
-.mission-section {
-    padding: 80px 10%;
-    text-align: center;
-    background-color: var(--white);
-}
-
-.mission-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.mission-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--primary);
-}
-
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 60px 10%;
-}
-
-.value-card {
-    background: var(--bg);
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
+    border: none;
     transition: 0.3s;
 }
 
-.value-card:hover {
-    background: var(--accent);
-    color: white;
-    transform: translateY(-5px);
-}
+.btn:hover { background: var(--primary); transform: translateY(-2px); }
 
-.value-card i {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    display: block;
+.filters { margin-bottom: 30px; }
+.filters button {
+    background: white;
+    border: 2px solid var(--accent);
+    padding: 8px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
 }
+.filters button.active { background: var(--accent); color: white; }
 
-.about-hero {
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
+footer { padding: 40px; text-align: center; background: var(--primary); color: white; }
+
+/* ======================================================
+   📱 ADAPTARE PENTRU MOBIL (Media Query)
+   ====================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Centrare Navigație și Meniu vertical */
+    nav {
+        flex-direction: column; /* Pune Logo-ul sus și Meniul jos */
+        padding: 15px 5%;
+    }
+
+    .logo { margin-bottom: 15px; }
+
+    nav ul {
+        flex-wrap: wrap; /* Permite link-urilor să sară pe rândul următor */
+        justify-content: center; /* Centrează link-urile */
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Spațiu egal între link-uri */
+    }
+
+    /* 2. Ajustare Hero */
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+
+    /* 3. Ajustare Secțiuni (About, Ghid, etc) */
+    section {
+        padding: 40px 5% !important; /* Reduce spațiul lateral pe ecrane mici */
+        text-align: center;
+    }
+
+    /* 4. Fix pentru imagini care stau lângă text (About/Ghid) */
+    div[style*="display: flex"] {
+        flex-direction: column !important; /* Pune imaginea peste text */
+        gap: 20px !important;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* O singură coloană de produse pe telefon */
+        padding: 0 10px;
+    }
+
+    /* 5. Ajustare Formular Contact */
+    section[style*="max-width: 600px"] {
+        margin: 30px 5% !important;
+        padding: 20px !important;
+    }
 }
-footer { padding: 40px; text-align: center; background: var(--primary); color: white; margin-top: 50px; }
